@@ -1,0 +1,26 @@
+{
+  "name": "ugc-video-generator",
+  "version": "1.0.0",
+  "description": "UGC video generator using Remotion and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "render": "npx.cmd remotion render src/Root.tsx VideoComposition public/output.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.190",
+    "@remotion/media-utils": "^4.0.190",
+    "@remotion/renderer": "^4.0.190",
+    "express": "^4.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.190"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^6.0.3"
+  }
+}

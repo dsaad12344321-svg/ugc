@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>استوديو فيديوهات UGC لشركاء Content Rewards</title>
+  <!-- Google Fonts: Cairo & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glass-bg"></div>
+  
+  <div class="app-container">
+    <header class="app-header">
+      <div class="brand">
+        <i data-lucide="video" class="brand-icon"></i>
+        <div>
+          <h1>استوديو فيديوهات UGC</h1>
+          <p class="brand-subtitle">مولد مقاطع الفيديو بدون وجه لحملات Content Rewards</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <span class="badge" id="campaign-badge">الحملة نشطة 🚀</span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <!-- العمود الأيمن: التحكم والتحليلات -->
+      <section class="control-panel">
+        
+        <!-- البطاقة 1: محلل الملفات -->
+        <div class="glass-card" id="analyzer-card">
+          <div class="card-header">
+            <div class="card-title">
+              <i data-lucide="shield-check" class="title-icon icon-purple"></i>
+              <h2>محلل الملفات ومطابقة قواعد الحملة</h2>
+            </div>
+            <button class="btn btn-primary btn-sm" id="btn-analyze">
+              <i data-lucide="refresh-cw"></i> فحص وتحليل
+            </button>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-description">
+              التحقق من مطابقة الملفات الأصلية وملفات الشخصية للشروط المحددة في قواعد ملف <code class="code-path">rules.txt</code>.
+            </p>
+            
+            <div class="checklist-grid" id="analysis-checklist">
+              <div class="empty-state">
+                <i data-lucide="search" class="empty-icon"></i>
+                <p>اضغط على زر "فحص وتحليل" للتحقق من الملفات ومطابقتها لقواعد الحملة.</p>
+              </div>
+            </div>
+
+            <div class="analysis-summary" id="analysis-summary" style="display: none;">
+              <div class="progress-info">
+                <span class="progress-label">الملفات التي تم التحقق منها</span>
+                <span class="progress-value" id="analysis-progress-val">0/10</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" id="analysis-progress-bar" style="width: 0%;"></div>
+              </div>
+              <div class="alert" id="analysis-alert">
+                <!-- سيتم ملؤها ديناميكياً -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- البطاقة 2: الإعدادات والتخصيص -->
+        <div class="glass-card disabled-card" id="config-card">
+          <div class="card-header">
+            <div class="card-title">
+              <i data-lucide="sliders" class="title-icon icon-blue"></i>
+              <h2>إعدادات وتخصيص الفيديو</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <form id="config-form" onsubmit="return false;">
+              
+              <!-- اختيار فيديو البداية -->
+              <div class="form-group">
+                <label for="hook-video">
+                  اختر فيديو البداية (الخطاف)
+                  <span class="tooltip" title="المقطع المرئي الذي يجذب الانتباه في أول 4 ثوانٍ. يمكنك الاختيار من فيديوهاتك الخاصة أو الفيديوهات الأصلية.">
+                    <i data-lucide="info" class="info-icon"></i>
+                  </span>
+                </label>
+                <select id="hook-video" class="form-control" required disabled>
+                  <!-- سيتم ملؤه ديناميكياً -->
+                </select>
+              </div>
+
+              <!-- اختيار نص الخطاف على الشاشة -->
+              <div class="form-group">
+                <label for="hook-text">
+                  نص الخطاف المعروض على الشاشة
+                  <span class="tooltip" title="توصي قواعد الحملة باختيار نص خطاف ذو جاذبية عالية لزيادة المشاهدات.">
+                    <i data-lucide="info" class="info-icon"></i>
+                  </span>
+                </label>
+                <div class="select-with-custom">
+                  <select id="hook-text-preset" class="form-control" disabled>
+                    <!-- سيتم ملؤه ديناميكياً من ملف القواعد -->
+                  </select>
+                  <input type="text" id="hook-text" class="form-control margin-top-xs" placeholder="أو اكتب نصاً مخصصاً هنا..." disabled required>
+                </div>
+              </div>
+
+              <!-- نص إضافي على الشاشة -->
+              <div class="form-group">
+                <label for="random-overlay">
+                  ترجمة نصية توضيحية ثانوية (اختياري)
+                </label>
+                <input type="text" id="random-overlay" class="form-control" placeholder="مثال: شاهد كيف أبدع، POV، إلخ." disabled>
+              </div>
+
+              <div class="form-row">
+                <!-- اختيار المؤثرات الصوتية -->
+                <div class="form-group col-6">
+                  <label for="keyboard-sound">مؤثر كتابة لوحة المفاتيح</label>
+                  <select id="keyboard-sound" class="form-control" disabled>
+                    <!-- سيتم ملؤه ديناميكياً -->
+                  </select>
+                </div>
+                <div class="form-group col-6">
+                  <label for="cash-sound">صوت تسجيل الأرباح والأموال</label>
+                  <select id="cash-sound" class="form-control" disabled>
+                    <!-- سيتم ملؤه ديناميكياً -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- نص الدعوة للتفاعل -->
+              <div class="form-group">
+                <label for="cta-text">
+                  الدعوة للتفاعل (الكلمة المفتاحية على الشاشة والصوت)
+                  <span class="tooltip" title="قاعدة إلزامية: احتفظ بكلمة الدعوة للتفاعل لطلب كتابة تعليق في الخاص طوال مدة الفيديو تقريباً.">
+                    <i data-lucide="info" class="info-icon"></i>
+                  </span>
+                </label>
+                <input type="text" id="cta-text" class="form-control" value="اكتب تعليقاً كلمة LINK للحصول على الرابط!" placeholder="مثال: اكتب تعليقاً كلمة LINK للبدء!" disabled required>
+              </div>
+
+              <!-- رابط الإحالة -->
+              <div class="form-group">
+                <label for="referral-link">رابط الإحالة المخصص لك في البايو</label>
+                <input type="text" id="referral-link" class="form-control" value="contentrewards.com/ref/danny" placeholder="مثال: contentrewards.com/ref/username" disabled required>
+              </div>
+
+              <!-- زر التوليد والتركيب -->
+              <div class="action-section">
+                <button type="button" class="btn btn-success btn-lg btn-full" id="btn-generate" disabled>
+                  <i data-lucide="sparkles"></i> تركيب وتوليد مقطع الفيديو
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- العمود الأيسر: معاينة وتحميل الفيديو -->
+      <section class="preview-panel">
+        
+        <!-- البطاقة 3: معاينة وتحميل -->
+        <div class="glass-card" id="preview-card">
+          <div class="card-header">
+            <div class="card-title">
+              <i data-lucide="smartphone" class="title-icon icon-pink"></i>
+              <h2>معاينة الفيديو الرأسي القصير</h2>
+            </div>
+            <span class="badge badge-outline">أبعاد 9:16 رأسية</span>
+          </div>
+          
+          <div class="card-body centered-body">
+            <!-- شاشة الهاتف المحاكية -->
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                
+                <!-- مكان الفيديو -->
+                <div class="video-container-element" id="video-wrapper">
+                  <div class="video-placeholder">
+                    <i data-lucide="clapperboard" class="placeholder-icon"></i>
+                    <p class="placeholder-text">قم بتوليد الفيديو لمعاينته داخل إطار الهاتف المحاكي.</p>
+                  </div>
+                  <!-- سيتم حقن الفيديو هنا بعد النجاح -->
+                </div>
+
+                <!-- شاشة التحميل والتوليد -->
+                <div class="render-overlay" id="render-loader" style="display: none;">
+                  <div class="spinner"></div>
+                  <h3 class="loader-title">جاري توليد وتركيب شريط الفيديو</h3>
+                  <p class="loader-sub">محرك Remotion يقوم بمعالجة ودمج المقاطع والملفات الصوتية...</p>
+                  <div class="render-progress-wrapper">
+                    <span class="progress-bar-label">جاري دمج اللقطات والمؤثرات...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- زر التحميل والملاحظات -->
+            <div class="download-container" id="download-box" style="display: none;">
+              <a href="#" class="btn btn-primary btn-lg" id="btn-download" download="ugc-video.mp4">
+                <i data-lucide="download"></i> تحميل مقطع الفيديو (MP4)
+              </a>
+              <div class="campaign-notes">
+                <h4>شروط النشر وإرسال الفيديو:</h4>
+                <ul>
+                  <li><i data-lucide="hash" class="note-icon"></i> يجب استخدام هاشتاج <strong>#contentrewardspartner</strong> في الوصف</li>
+                  <li><i data-lucide="message-square" class="note-icon"></i> تفعيل ردود ManyChat التلقائية لإرسال رابطك في الخاص</li>
+                  <li><i data-lucide="link" class="note-icon"></i> تأكد من وضع رابط الإحالة الخاص بك في بايو حسابك</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- سجلات المخرجات -->
+        <div class="glass-card" id="logs-card" style="display: none;">
+          <div class="card-header">
+            <div class="card-title">
+              <i data-lucide="terminal" class="title-icon icon-gray"></i>
+              <h3>سجل عمليات محرك Remotion</h3>
+            </div>
+            <button class="btn-text" onclick="document.getElementById('log-output').textContent = ''">مسح</button>
+          </div>
+          <div class="card-body">
+            <pre class="log-console" id="log-output">جاهز للتوليد والتركيب...</pre>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // تفعيل أيقونات Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>

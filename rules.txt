@@ -1,0 +1,60 @@
+Faceless UGC [Non-English]
+
+AI-Generated UGC
+
+Earnings
+YouTube $0.50/1K views
+Instagram $0.50/1K views
+X $0.50/1K views 
+
+Post high-quality, AI-generated short videos promoting Content Rewards and get paid for the views you pull. You don't need to show your real face or use your real voice.
+
+The goal is to leverage advanced AI generation tools to create highly engaging, natural-looking videos that attract new clippers and video editors to Content Rewards. Your videos should showcase:
+
+- Creator and editor earnings screenshots.
+- Fast and reliable payouts.
+- Active clipping campaigns on the platform.
+
+# Hooks that already work
+
+The hook is most of the battle. Stack all three kinds: one on screen, one you say out loud, one you show on camera.
+
+**On screen**
+
+- "Making a doctor salary in 67 mins"
+- "POV: making 1.2k in a class challenge"
+- "Making a lawyer salary while working out"
+- "Making a doctor's salary without speaking (watch me cook)"
+- "Making 1.7k eating pretzels"
+- "They said I didn't have enough for gas... little do they know"
+
+**Out loud**
+
+- "Today we're gonna..."
+- "How fast can we..."
+- "I've never done this before..."
+
+**On camera**
+
+- Rapid keyboard clicking
+- A big reaction on face
+- Cursor flying around the screen
+
+Rules
+- **Zero Tolerance for Low-Quality AI:** The AI UGC space is crowded. To maintain platform integrity, any video that looks obviously robotic, poorly rendered, or lazy **will be rejected.**
+- **Tag:** Must use `#contentrewardspartner` on every post.
+- **Submit Every Video:** No submission = no payout.
+- **CTA BOTH IN VIDEO AND CAPTION:** Say the keyword out loud *and* keep it on screen for most of the video (e.g., *"Comment LINK for the link"*).
+- **ManyChat (IG/TT) and CommentShark (YT) Automation:**
+    1. A call to action is required on every post, and it has to be the **comment-to-DM flow:** 
+    2. have ManyChat automatically DM everyone who does (for IG and TT), and Comment Shark automatically reply for YT.
+    3. Tell viewers to comment a *keyword* 
+    - You can also point people to your bio link, but that's on top of this, not instead of it.
+
+- Adding your custom referral link to your account bio is **mandatory**. Every click helps you climb the leaderboard and increases your chance to earn bonus rewards.
+- Whether it's the automated DM or one you send by hand, it has to include your own referral link.
+
+
+
+
+

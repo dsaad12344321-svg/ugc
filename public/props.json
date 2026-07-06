@@ -1,0 +1,19 @@
+{
+  "hookVideoPath": "http://localhost:3000/character/videos/2.mp4",
+  "hookText": "تحقيق راتب طبيب في 67 دقيقة",
+  "ctaText": "اكتب تعليقاً كلمة LINK للحصول على الرابط!",
+  "keyboardSoundPath": "http://localhost:3000/character/sounds/keyboard2.mp3",
+  "cashSoundPath": "http://localhost:3000/character/sounds/cash2.mp3",
+  "randomOverlayText": "",
+  "referralLink": "contentrewards.com/ref/danny",
+  "tag": "#contentrewardspartner",
+  "sceneDurations": {
+    "hook": 4,
+    "rewards": 5,
+    "signUp": 5,
+    "findCampaign": 6,
+    "editVideo": 4,
+    "getPaid": 5,
+    "outro": 4
+  }
+}

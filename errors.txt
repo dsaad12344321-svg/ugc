@@ -1,0 +1,6 @@
+src/Root.tsx(34,7): error TS2322: Type '(props: VideoCompositionProps) => React.JSX.Element' is not assignable to type 'LooseComponentType<Record<string, unknown>>'.
+  Type '(props: VideoCompositionProps) => React.JSX.Element' is not assignable to type 'FunctionComponent<Record<string, unknown>>'.
+    Types of parameters 'props' and 'props' are incompatible.
+      Type 'Record<string, unknown>' is missing the following properties from type 'VideoCompositionProps': hookVideoPath, hookText, ctaText, keyboardSoundPath, and 4 more.
+src/Root.tsx(52,12): error TS2352: Conversion of type 'Record<string, unknown>' to type 'VideoCompositionProps' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Record<string, unknown>' is missing the following properties from type 'VideoCompositionProps': hookVideoPath, hookText, ctaText, keyboardSoundPath, and 4 more.
