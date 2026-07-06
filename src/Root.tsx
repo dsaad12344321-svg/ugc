@@ -78,7 +78,7 @@ export const Root: React.FC = () => {
 
       defaultProps={{
 
-        hookVideoPath: 'http://localhost:3000/original/videos/1.mp4',
+        hookVideoPath: 'http://localhost:3000/original/videos/1.webm',
 
         hookText: 'POV: ربح 1.2 ألف دولار في تحدي الصف',
 
