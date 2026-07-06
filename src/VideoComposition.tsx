@@ -89,7 +89,7 @@ export const VideoComposition = (props: VideoCompositionProps) => {
       <Sequence from={rewardsStart} durationInFrames={rewardsFrames}>
         <div className="scene">
           <Video
-            src="http://localhost:3000/character/templates/gotocontentrewards.mp4"
+            src="http://localhost:3000/character/templates/gotocontentrewards.webm"
             volume={0.2}
             className="background-video"
           />
@@ -104,7 +104,7 @@ export const VideoComposition = (props: VideoCompositionProps) => {
       <Sequence from={signUpStart} durationInFrames={signUpFrames}>
         <div className="scene">
           <Video
-            src="http://localhost:3000/character/templates/signup.mp4"
+            src="http://localhost:3000/character/templates/signup.webm"
             volume={0.2}
             className="background-video"
           />
@@ -120,7 +120,7 @@ export const VideoComposition = (props: VideoCompositionProps) => {
       <Sequence from={findCampaignStart} durationInFrames={findCampaignFrames}>
         <div className="scene">
           <Video
-            src="http://localhost:3000/character/templates/findcampainandjoin.mp4"
+            src="http://localhost:3000/character/templates/findcampainandjoin.webm"
             volume={0.2}
             className="background-video"
           />
@@ -136,7 +136,7 @@ export const VideoComposition = (props: VideoCompositionProps) => {
       <Sequence from={editVideoStart} durationInFrames={editVideoFrames}>
         <div className="scene">
           <Video
-            src="http://localhost:3000/character/templates/edityourvideo.mp4"
+            src="http://localhost:3000/character/templates/edityourvideo.webm"
             volume={0.2}
             className="background-video"
           />
@@ -152,7 +152,7 @@ export const VideoComposition = (props: VideoCompositionProps) => {
       <Sequence from={getPaidStart} durationInFrames={getPaidFrames}>
         <div className="scene">
           <Video
-            src="http://localhost:3000/character/templates/postitandgetpaid.mp4"
+            src="http://localhost:3000/character/templates/postitandgetpaid.webm"
             volume={0.2}
             className="background-video"
           />
